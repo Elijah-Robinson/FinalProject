@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Reservation Form</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <h1>Reservation Form</h1>
+    <form method="post" action="/reservation">
+        <label for="passenger_name">Passenger Name:</label>
+        <input type="text" id="passenger_name" name="passenger_name"><br>
+        <label for="seat_row">Seat Row:</label>
+        <input type="text" id="seat_row" name="seat_row"><br>
+        <label for="seat_column">Seat Column:</label>
+        <input type="text" id="seat_column" name="seat_column"><br>
+        <label for="e_ticket_number">E-Ticket Number:</label>
+        <input type="text" id="e_ticket_number" name="e_ticket_number"><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>

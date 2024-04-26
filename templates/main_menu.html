@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Main Menu</title>
+</head>
+
+<body>
+    <h1>Seating Chart</h1>
+    <table border="1">
+        {% for row in seating_chart %}
+        <tr>
+            {% for name in row %}
+            <td>{{ name or 'Available' }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+    <form method="post">
+        <input type="submit" name="action" value="reserve">
+        <input type="submit" name="action" value="admin">
+    </form>
+</body>
+
+</html>
